@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyTableViewController.h"
 
 @interface ViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
+@property (strong, nonatomic) MyTableViewController *myTableController;
 
 @end

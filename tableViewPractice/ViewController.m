@@ -13,17 +13,16 @@
 @end
 
 @implementation ViewController
+@synthesize myTableView, myTableController;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	// Do any additional setup after loading the view, typically from a nib.    
+    myTableController = [[MyTableViewController alloc] init];
+    myTableView.delegate = myTableController;
+    myTableView.dataSource = myTableController;
+    myTableController.view = myTableController.tableView;
 }
 
 @end
